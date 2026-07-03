@@ -2,7 +2,7 @@
 #define ROUTINEMANAGER_H
 
 #include <vector>
-
+#include "RoutineGenerator.h"
 #include "teacher.h"
 #include "Subject.h"
 #include "StudentClass.h"
@@ -14,6 +14,7 @@ using namespace std;
 class RoutineManager
 {
 private:
+    RoutineGenerator generator;
     vector<Teacher> teachers;
     vector<Subject> subjects;
     vector<StudentClass> classes;
@@ -37,6 +38,8 @@ public:
 
     void addTimeSlot();
     void viewTimeSlots();
+
+    void generateRoutine();
 };
 
 #endif

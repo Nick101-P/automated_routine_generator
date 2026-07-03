@@ -24,9 +24,10 @@ void RoutineManager::start()
 
         cout << "7. Add Classroom\n";
         cout << "8. View Classrooms\n";
+        cout << "9. Generate Routine\n";
 
-        cout << "9. Add Time Slot\n";
-        cout << "10. View Time Slots\n";
+        cout << "10. Add Time Slot\n";
+        cout << "11. View Time Slots\n";
 
         cout << "0. Exit\n";
 
@@ -68,11 +69,16 @@ void RoutineManager::start()
                 viewClassrooms();
                 break;
 
-            case 9:
+               case 9:
+    generateRoutine();
+    break;
+    
+    break;
+            case 10:
                 addTimeSlot();
                 break;
 
-            case 10:
+            case 11:
                 viewTimeSlots();
                 break;
 
@@ -159,5 +165,15 @@ void RoutineManager::viewTimeSlots()
         timeSlots[i].displayTimeSlot();
 }
 
+void RoutineManager::generateRoutine()
+{
+    generator.generateRoutine(
+        teachers,
+        subjects,
+        classes,
+        classrooms,
+        timeSlots
+    );
+}
 
 

@@ -22,5 +22,6 @@ public:
     void inputTeacher();
 
     void displayTeacher();
+    
 };
 #endif 

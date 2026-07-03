@@ -3,7 +3,6 @@
 int main()
 {
     RoutineManager manager;
-
     manager.start();
 
     return 0;
